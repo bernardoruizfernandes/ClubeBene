@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+
+<script type="text/javascript" src = "altera_voto.js"></script>
+
+<body>
+
+    <p id = "slot1">
+        ----
+    </p>
+    <button id="votar">voto</button>
+
+    <p id = "slot2">
+        ----
+    </p>
+    <p id = "slot3">
+        ----
+    </p>
+    <p id = "slot4">
+        ----
+    </p>
+    <p id = "slot5">
+        ----
+    </p>
+    <p id = "slot6">
+        ----
+    </p>
+    
+
+    <script>
+        
+        $(function(){
+            $.get("http://localhost:4000/desafios", function(data){
+                $("#slot1").text(data[0].usuario +' '+ data[0].votos);
+                $("#slot2").text(data[1].usuario +' '+ data[1].desafio);
+                $("#slot3").text(data[2]);
+                $("#slot4").text(data[3]);
+                $("#slot5").text(data[4]);
+                $("#slot6").text(data[5]);
+            });
+        });
+
+        $("#votar").on("click", function(){
+            $.post("http://172.31.252.139:4000/votar/", function(data){
+                //alterar o botao
+                $("#slot1").text(data[0].usuario +' '+ data[0].votos);
+                $("#slot2").text(data[1].usuario +' '+ data[1].desafio);
+                $("#slot3").text(data[2]);
+                $("#slot4").text(data[3]);
+                $("#slot5").text(data[4]);
+                $("#slot6").text(data[5]);
+            }
+            )
+        })
+
+    </script>
+</body>
+</html>
