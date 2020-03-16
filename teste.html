@@ -15,52 +15,77 @@ crossorigin="anonymous"></script>
 
 <body>
 
-    <p id = "slot1">
-        ----
+    <p id = "slot0">
+        usuario desafio descricao votos 
     </p>
-    <button id="votar">voto</button>
-
+    <p id = "slot1">
+        ----    
+    </p> <button id="votar1">voto</button>
     <p id = "slot2">
         ----
     </p>
+    </p> <button id="votar2">voto</button>
     <p id = "slot3">
         ----
     </p>
+    </p> <button id="votar3">voto</button>
     <p id = "slot4">
         ----
     </p>
-    <p id = "slot5">
-        ----
-    </p>
-    <p id = "slot6">
-        ----
-    </p>
+    </p> <button id="votar4">voto</button>
+
     
 
     <script>
         
         $(function(){
             $.get("http://localhost:4000/desafios", function(data){
-                $("#slot1").text(data[0].usuario +' '+ data[0].votos);
-                $("#slot2").text(data[1].usuario +' '+ data[1].desafio);
-                $("#slot3").text(data[2]);
-                $("#slot4").text(data[3]);
-                $("#slot5").text(data[4]);
-                $("#slot6").text(data[5]);
+                $("#slot1").text(data[0].usuario +' '+ data[0].desafio +' '+ data[0].votos);
+                $("#slot2").text(data[1].usuario +' '+ data[1].desafio +' '+ data[1].votos);
+                $("#slot3").text(data[2].usuario +' '+ data[2].desafio +' '+ data[2].votos);
+                $("#slot4").text(data[3].usuario +' '+ data[3].desafio +' '+ data[3].votos);
             });
         });
 
-        $("#votar").on("click", function(){
-            $.post("http://172.31.252.139:4000/votar/", function(data){
+        $("#votar1").on("click", function(){
+            $.post("http://172.31.252.139:4000/votar/1/", function(data){
                 //alterar o botao
-                $("#slot1").text(data[0].usuario +' '+ data[0].votos);
-                $("#slot2").text(data[1].usuario +' '+ data[1].desafio);
-                $("#slot3").text(data[2]);
-                $("#slot4").text(data[3]);
-                $("#slot5").text(data[4]);
-                $("#slot6").text(data[5]);
-            }
-            )
+
+                $("#slot1").text(data[0].usuario +' '+ data[0].desafio +' '+ data[0].votos);
+                $("#slot2").text(data[1].usuario +' '+ data[1].desafio +' '+ data[1].votos);
+                $("#slot3").text(data[2].usuario +' '+ data[2].desafio +' '+ data[2].votos);
+                $("#slot4").text(data[3].usuario +' '+ data[3].desafio +' '+ data[3].votos);
+            })
+        })
+
+        $("#votar2").on("click", function(){
+            $.post("http://172.31.252.139:4000/votar/2/", function(data){
+                //alterar o botao
+                $("#slot1").text(data[0].usuario +' '+ data[0].desafio +' '+ data[0].votos);
+                $("#slot2").text(data[1].usuario +' '+ data[1].desafio +' '+ data[1].votos);
+                $("#slot3").text(data[2].usuario +' '+ data[2].desafio +' '+ data[2].votos);
+                $("#slot4").text(data[3].usuario +' '+ data[3].desafio +' '+ data[3].votos);
+            })
+        })
+
+        $("#votar3").on("click", function(){
+            $.post("http://172.31.252.139:4000/votar/3/", function(data){
+                //alterar o botao
+                $("#slot1").text(data[0].usuario +' '+ data[0].desafio +' '+ data[0].votos);
+                $("#slot2").text(data[1].usuario +' '+ data[1].desafio +' '+ data[1].votos);
+                $("#slot3").text(data[2].usuario +' '+ data[2].desafio +' '+ data[2].votos);
+                $("#slot4").text(data[3].usuario +' '+ data[3].desafio +' '+ data[3].votos);
+            })
+        })
+
+        $("#votar4").on("click", function(){
+            $.post("http://172.31.252.139:4000/votar/4/", function(data){
+                //alterar o botao
+                $("#slot1").text(data[0].usuario +' '+ data[0].desafio +' '+ data[0].votos);
+                $("#slot2").text(data[1].usuario +' '+ data[1].desafio +' '+ data[1].votos);
+                $("#slot3").text(data[2].usuario +' '+ data[2].desafio +' '+ data[2].votos);
+                $("#slot4").text(data[3].usuario +' '+ data[3].desafio +' '+ data[3].votos);
+            })
         })
 
     </script>
