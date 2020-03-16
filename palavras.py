@@ -1,10 +1,5 @@
 '''
 Palavras Improprias Clube Bene
-
-2020
-
-Bernardo Fernandes
-
 '''
 
 
@@ -23,7 +18,3 @@ def testa_tweet(post):
             n+=1
         
     return n
-
-
-
-

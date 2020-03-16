@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu perfil Bené</title>
+    <link rel="stylesheet" type="text/css" href="css/bene-style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+
+
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand:600&display=swap');
+
+        html, body{
+            font-family: 'Quicksand', sans-serif;
+            background-color: #e8c680;
+        }
+
+        /* perfil */
+        div.perfil {
+            width: 100px;
+            height: 25px;
+            /* background-color: blue; */
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10%;
+        }
+
+        /* COROINHA */
+        div.crown {
+            width: 70px;
+            height: 30px;
+            /* background-color: brown; */
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5%;
+        }
+
+        /* FOTO PERFIL */
+        div.foto-perfil {
+            width: 120px;
+            height: 120px;
+            /* background-color: greenyellow; */
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* div.back-perfil {
+            width: 120px;
+            height: 120px;
+            background-color: greenyellow;
+            display:inline-block;
+            margin-left: auto;
+            margin-right: auto;
+        } */
+
+        /* FONTES */
+        p {
+            text-align: center;
+        }
+
+        p.idAriel {
+            font-size: 14pt ;
+        }
+
+        p.nAriel {
+            font-size: 20pt ;
+        }
+
+        p.pPerfil {
+            font-size: 12pt;
+            margin-top: -20px;
+        }
+
+        /* BARRA DE PONTOS */
+
+        .progress {
+            border-radius: 1.25rem;
+        }
+
+        .progress-bar {
+            background-color: #d16600;
+        }
+
+        div.min-value {
+            margin-top: -5%;
+            margin-left: 33%;
+        }
+
+        img.chevron {
+            margin-top: 5%;
+            color: palevioletred;
+            height: 25px;
+        }
+
+        /* RANKING */ 
+        div.ranking {
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 18px;
+        }
+
+        span.ranking {
+            font-size: 10pt;
+        }
+
+        p.rankingT {
+            font-size: 26pt;
+            color: #d16600;
+        }
+
+        p.ranking {
+            color: #c9a249;
+            line-height: 0px;
+        }
+
+        /* MISSOES CUPONS GIFT CARDS*/
+        div.item-list {
+            background-color: #EBBD59;
+            height: 130px;
+            margin-top: 5%;
+        }
+        .flex {
+            display: flex;
+        }
+
+        .row {
+            flex-direction: row;
+        }
+
+        .flex-item-1 {
+            flex: 1;
+        }
+
+        div.item {
+            width: 60px;
+            height: 60px;
+            /* background-color: darkblue; */
+            margin: 10px;
+            margin-top: 25px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        p.pRanking {
+            color: blanchedalmond;
+            margin-top: 5px;
+        }
+
+        div.space {
+        margin-bottom: 70px;
+        }
+
+        /* MENU */
+        footer { 
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #e8d7b3;
+        }
+
+
+        div.middle {
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            /* background-color: #8F846E;; */
+            margin-top: 4%;
+            margin-left: 4%;
+        }
+
+        ul.nav {
+            margin-left: 5%;
+        }
+
+        a, a:hover {
+            text-decoration: none !important;
+            color: #8F846E;
+            font-size: 0.93em;
+            margin-top: 0.2em;
+        }
+
+
+
+        /* a:active, a:visited, a:hover {
+            color: #d16600;
+        } */
+
+       .menu-img1 {
+           position: relative;
+           margin-left: 18%;
+           margin-bottom: 5%;
+           width: 22px;
+           height: 23px;
+       }
+
+       .menu-img2 {
+           position: relative;
+           margin-left: 0.1%;
+           margin-top: 5%;
+           width: 26px;
+           height: 22px;
+       }
+
+       .menu-img3 {
+           position: relative;
+           margin-left: 21%;
+           margin-top: 5%;
+           width: 20px;
+       }
+
+       .menu-img4 {
+           position: relative;
+           margin-left: 12%;
+           margin-top: 5%;
+           width: 20px;
+           height: 23px; 
+       }
+
+       span.active {
+           color: #d16600;
+       }
+
+    </style>
+
+</head>
+<body>
+    
+<div class="container">
+
+
+    <!-- PERFIL -->
+
+    <div class="crown">
+        <img src="img/crown.png">
+    </div>
+    <br>
+    <div class="foto-perfil">
+        <img src="img/ariel.png" width="120px">
+    </div>
+    <!-- <div class="back-perfil"></div> -->
+    <p class="idAriel">#arieluz</p>
+    <p class="nAriel">Ariel Luz</p>
+
+    <!-- BARRA DE PONTOS-->
+    <div class="progress myProgress">
+        <div id="mPts" class="progress progress-bar" role="progressbar" style="width: 100%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <div class="min-value">
+        <img class="chevron" src="img/arrow-up-short.svg" width="15px">
+    </div>
+
+    <!-- RANKING -->
+    <div class="ranking-pontos flex row">
+        <div class="ranking flex-item-1">
+            <p class="ranking">ranking</p>
+            <p class="rankingT"> básico</p>
+        </div>
+        <div class="barra">
+            <img src="img/barrinha.png">
+        </div>
+        <div class="ranking flex-item-1">
+            <p class="ranking">total de pontos</p>
+            <p class="rankingT"><span id="demo"> --- </span></p>
+        </div>
+    </div>
+
+   <!-- MISSOES CUPONS GIFT CARDS -->
+    <div class="item-list flex row">
+        <div class="item flex-item-1">
+           <a href="missoes.html"> <img src="img/missoes.png">
+            <p class="pRanking">missões</p> </a>
+        </div>
+        <div class="item flex-item-1">
+            <a href="#"> <img src="img/cupons.png">
+            <p class="pRanking">cupons</p> </a>
+        </div>
+        <div class="item flex-item-1">
+            <a href="#"> <img src="img/giftcards.png">
+            <p class="pRanking">giftcards</p> </a>
+        </div>
+    </div>
+
+        <!-- ESPAÇO-->
+        <div class="space"></div>
+        <br>
+
+     <!-- MENU -->
+    <footer>
+        <div class="flex row menu-list">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index-bene.html"><img src="img/casa-on.png" class="menu-img1"><span class="active">home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active flex row" href="loja-bene.html"><img src="img/loja-of.png" class="menu-img2">loja</a>
+                </li>
+            </ul>
+
+            <div class="middle">
+                <img class="plus" src="img/plus-of.png" width="30px">
+            </div>
+
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><img src="img/rank-of.png" class="menu-img3">ranking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active flex row" href="#"><img src="img/perfil-of.png" class="menu-img4">perfil</a>
+                </li>
+            </ul>
+         </div>
+
+    </footer>
+
+</div>
+
+    <script>
+        var pts = document.getElementById("mPts");
+        var output = document.getElementById("demo");
+        
+
+        $(function(){
+            $.get("http://172.31.252.139:4000/pontos/", function(data){
+                $("#demo").text(data);
+            });
+        });
+
+    
+
+        pts.onprogress = function() {
+        output.innerHTML = this.value;
+        }
+
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>

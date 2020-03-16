@@ -1,3 +1,5 @@
+//mostrador de pontos 
+
 const sqlite3 = require('sqlite3').verbose();
 var express = require('express');
 var cors = require('cors');
@@ -18,13 +20,7 @@ app.get('/pontos/', function(req, res){
 
   db.get("SELECT * FROM pontos WHERE usuario = ?", [usu], function(err, row) {
 
-    if (row){
-      res.send(row.pontos.toString());
-    }
-
-    else{
-      console.log('sem pontos');
-    }
+    if (row){ res.send(row.pontos.toString()); };
     
   });
 });
@@ -33,11 +29,3 @@ app.get('/pontos/', function(req, res){
 app.listen(4000, function(){
   console.log('localhost OK');
 });
-
-// close the database connection
-//db.close((err) => {
-//  if (err) {
-//    return console.error(err.message);
-//  }
-//});
-

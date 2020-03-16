@@ -1,10 +1,5 @@
 '''
 Crawler Clube Bene
-
-2020
-
-Bernardo Fernandes
-
 '''
 
 # Imports   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

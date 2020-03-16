@@ -1,10 +1,5 @@
 '''
 Controlador Geral Clube Bene
-
-2020
-
-Bernardo Fernandes
-
 '''
 
 # Imports   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -27,5 +22,3 @@ def roda_busca():
 roda_busca()
 
 print("Operacao finalizada\n")
-
-
